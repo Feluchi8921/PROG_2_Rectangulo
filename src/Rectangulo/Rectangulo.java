@@ -8,19 +8,16 @@ public class Rectangulo {
     private Punto p1;
     private Punto p2;
 
-    private Punto p3;
-    private Punto p4;
-
     //Constructores
 
     public Rectangulo() {
-    }
-
-    public Rectangulo(Punto p1, Punto p2, Punto p3, Punto p4) {
         this.p1 = p1;
         this.p2 = p2;
-        this.p3 = p3;
-        this.p4 = p4;
+    }
+
+    public Rectangulo(Punto p1, Punto p2) {
+        this.p1 = p1;
+        this.p2 = p2;
     }
 
 
@@ -45,15 +42,17 @@ public class Rectangulo {
     }
     //Lo obtengo desplazando p1
     public Punto getP3() {
-        p4.desplazarPunto(0,DESPLAZAMIENTO);
-      return p4;
+        Punto p3 = new Punto(0, p1.desplazarPuntoEjeY(0, 5));
+        return p3;
     }
+
 
     //Lo obtengo desplazando p2
-
     public Punto getP4() {
-        return ;
+        Punto p4 = new Punto(0, p2.desplazarPuntoEjeY(0, 5));
+        return p4;
     }
+
     //No puedo setear p3 y p4 porque dependen de otros puntos
 
     //Obtener rectangulo

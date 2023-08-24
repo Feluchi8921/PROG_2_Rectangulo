@@ -7,45 +7,34 @@ public class Punto {
 
     //Constantes
     public static final double DESPLAZAMIENTO=5;
+    //Constructores
 
-    //Contructores
-    public Punto(){
-        this.x=0;
-        this.y=0;
-    }
-    public Punto(double x, double y){
-        this.x=x;
-        this.y=y;
+    public Punto(double x, double y) {
+        this.x = 0;
+        this.y = 0;
     }
 
     //Metodos
-    //Get
-    public void getPunto(){
-        System.out.println("El punto geometrico es: ("+this.x+"; "+this.y+")");
+    //Getter y Setter
+
+    public double getX() {
+        return x;
     }
-    public double getX(){
-        return this.x;
+
+    public void setX(double x) {
+        this.x = x;
     }
+
     public double getY() {
-        return this.y;
+        return y;
     }
 
-    //Set
-    public void setPunto(double x, double y){
-        this.x=x;
-        this.y=y;
-    }
-    public void setX(double x){
-        this.x=x;
-    }
-    public void setDesplazamiento(double y){
-        this.y=y;
+    public void setY(double y) {
+        this.y = y;
     }
 
-    //Desplazar
-    public void desplazarPunto(double dx, double dy) {
-        this.x += dx;
-        this.y += dy;
+    //Metodo desplazar
+    public double desplazarPuntoEjeY(double x, double y){
+       return this.y+=DESPLAZAMIENTO;
     }
-
 }
