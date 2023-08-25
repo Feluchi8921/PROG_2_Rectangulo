@@ -5,20 +5,19 @@ public class Punto {
     private double x;
     private double y;
 
-    //Constantes
-    public static final double DESPLAZAMIENTO=5;
     //Constructores
 
     public Punto(double x, double y) {
-        this.x = 0;
-        this.y = 0;
+        this.x = x;
+        this.y = y;
     }
+
 
     //Metodos
     //Getter y Setter
 
     public double getX() {
-        return x;
+        return this.x;
     }
 
     public void setX(double x) {
@@ -26,7 +25,7 @@ public class Punto {
     }
 
     public double getY() {
-        return y;
+        return this.y;
     }
 
     public void setY(double y) {
@@ -34,7 +33,7 @@ public class Punto {
     }
 
     //Metodo desplazar
-    public double desplazarPuntoEjeY(double x, double y){
-       return this.y+=DESPLAZAMIENTO;
+    public void desplazarPuntoEjeY(double desplazamiento){
+         this.y+=desplazamiento;
     }
 }
